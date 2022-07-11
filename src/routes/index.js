@@ -6,7 +6,6 @@ function route(app) {
 
     app.use('/', siteRouter);
 
-    app.use('/search', newsRouter);
 }
 
 module.exports = route;
