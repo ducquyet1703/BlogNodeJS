@@ -5,7 +5,9 @@
             {{#each blogNews}}
             <div class="card card-blog-item">
                 <div class="card-body">
-                    <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+                    <a href="/blog/{{this.slug}}">
+                        <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+                    </a>
                     <h5 class="card-title">{{this.NameDepartment}}</h5>
                     <p class="card-text">{{this.DescriptionDepartment }}</p>
                     <a href="#" class="btn btn-primary">Xem Thêm</a>

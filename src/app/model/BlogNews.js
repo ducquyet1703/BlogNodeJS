@@ -8,6 +8,8 @@ const News = new Schema({
     EmployeeDepartment: { type: Number},
     ManagerDepartment: { type: String },
     image: {type: String},
+    slug: {type: String},
+    VideoId: {type: String},
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
 });
