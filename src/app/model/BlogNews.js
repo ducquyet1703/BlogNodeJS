@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+const slug = require('mongoose-slug-generator');
+
+mongoose.plugin(slug);
+
 const Schema = mongoose.Schema;
 
 const News = new Schema({
@@ -8,10 +12,10 @@ const News = new Schema({
     EmployeeDepartment: { type: Number},
     ManagerDepartment: { type: String },
     image: {type: String},
-    slug: {type: String},
     VideoId: {type: String},
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now },
+    slug: {type: String, slug: 'NameDepartment', unique: true},
+}, {
+    timestamps: true,
 });
 
 module.exports = mongoose.model('News', News);
