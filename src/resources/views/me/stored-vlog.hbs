@@ -1,0 +1,22 @@
+<div class="mt-4 text-center">
+    <h3>Khoá học của tôi</h3>
+
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên Vlog</th>
+                <th scope="col">Mô tả</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each blogNews}}
+            <tr>
+                <th scope="row">{{@index}}</th>
+                <td>{{this.NameDepartment}}</td>
+                <td>{{this.DescriptionDepartment}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
